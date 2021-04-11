@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/vivid-icons@1.0.10"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Loan Calculator</title>
+  </head>
+  <body>
+    <main class="content">
+      <div class="card">
+        <header>
+          <div class="card__header flex">
+            <div class="card__calc-icon">
+              <i
+                data-vi="calculator"
+                data-vi-primary="#ffffff"
+                data-vi-accent="#52b788"
+              ></i>
+            </div>
+            <h1 class="card__title">Loan Calculator</h1>
+          </div>
+        </header>
+        <section>
+          <div class="card__body">
+            <section class="card__input-section">
+              <p
+                class="card__error animate__animated animate__lightSpeedInRight"
+              >
+                Check your input and try again
+              </p>
+              <form class="card__form flex">
+                <div class="card__input-group">
+                  <div class="card__input-icon">
+                    <i
+                      data-vi="graph-bar"
+                      data-vi-primary="#40916c"
+                      data-vi-accent="#52b788"
+                    ></i>
+                  </div>
+                  <input
+                    id="amount-input"
+                    type="number"
+                    step="any"
+                    class="card__input"
+                    placeholder="Loan amount ($)"
+                    aria-label="Enter the loan amount"
+                  />
+                </div>
+                <div class="card__input-group">
+                  <div class="card__input-icon">
+                    <i
+                      data-vi="equaliser"
+                      data-vi-primary="#40916c"
+                      data-vi-accent="#52b788"
+                    ></i>
+                  </div>
+                  <input
+                    id="interest-input"
+                    type="number"
+                    step="any"
+                    class="card__input"
+                    placeholder="Annual interest (%)"
+                    aria-label="Enter the annual interest amount"
+                  />
+                </div>
+                <div class="card__input-group">
+                  <div class="card__input-icon">
+                    <i
+                      data-vi="calendar"
+                      data-vi-primary="#40916c"
+                      data-vi-accent="#b7e4c7"
+                    ></i>
+                  </div>
+                  <input
+                    id="repayment-input"
+                    type="number"
+                    step="any"
+                    class="card__input"
+                    placeholder="Repayment years"
+                    aria-label="Enter the number of years to repay the loan"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  class="card__form-submit"
+                  value="Calculate"
+                />
+              </form>
+            </section>
+            <section class="card__output-section flex">
+              <div class="card__output-group flex">
+                <p id="monthly-payment" class="card__output">
+                  <span class="card__output-span">Monthly payment</span
+                  ><span class="card__output-span"></span>
+                </p>
+                <p id="total-payment" class="card__output">
+                  <span class="card__output-span">Total payment</span
+                  ><span class="card__output-span"></span>
+                </p>
+                <p id="total-interest" class="card__output">
+                  <span class="card__output-span">Total interest</span
+                  ><span class="card__output-span"></span>
+                </p>
+              </div>
+              <!-- animate__animated animate__rotateOut animate__infinite animate__slow"  -->
+              <div class="card__loading">
+                <i
+                  data-vi="refresh"
+                  data-vi-size="96"
+                  data-vi-primary="#40916c"
+                  data-vi-accent="#52b788"
+                ></i>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
